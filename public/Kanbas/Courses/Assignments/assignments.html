@@ -1,36 +1,206 @@
-<table>
+<html>
+    <head>
+        <link rel="stylesheet" href="kanbas/courses/home/styles.css">
+        <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+        <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+        <link href="/vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-1 bg-color-black">
+                <div class="wd-felx-row-container">
+                    <div class="bg-color-black d-none d-lg-block">
+                        <ul class="wd-kanbas-navigation">
+                            <li>
+                                <a href="/Kanbas/Account/Profile/index.html"><i class="fa fa-user" style="color:white"></i></br>Account</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kanbas/Dashboard/index.html"><i class="fa fa-keyboard"></i></br>
+                                  Dashboard</a>
+                            </li>
+                            <li class="wd-active">
+                                <a href="/Kanbas/Courses/Home/home.html"><i class="fa fa-book"></i></br>Courses</a</li>
+                            <li>
+                                <a href="#">
+                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                  Calendar
+                                </a>
+                            </li>
+                              <li><a href="#"><i class="fa fa-envelope"></i></br>Inbox</a></li>
+                              <li><a href="#"><i class="fa fa-clock"></i></br>History</a></li>
+                              <li><a href="#"><i class="fa fa-print"></i></br>Studio</a></li>
+                              <li><a href="#"><i class="fa fa-comment"></i><br/>Commons</a></li>
+                              <li><a href="#">
+                                <i class="fa fa-question"></i></br>
+                                Help</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+    
+            
+            <div class="col-11 bg-primary-subtle">
+                <div class="position-absolute top-0 end-0">
+                    <button type="button" class="btn btn-light">
+                        <i class="fa fa-eye"></i>
+                        Student viewing
+                    </button>
+                </div>
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" style="color: red; text-decoration: none;">
+                                <i class="fa fa-list" style="color: red;"></i>CS5200.12345.202410
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Assignments
+                        </li>
+                    </ol>
+                  </nav>
+                  <hr/>
+                  <div class="row">
+                    <div class="col-2 bg-danger-subtle">
+                        <div class="d-none d-md-block">
+                            <ul class="wd-course-navigation">
+                            <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li class="wd-active"><a href="/Kanbas/Courses/Assignments/Assignments.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="/Kanbas/Courses/Grades/Grades.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Settings</a></li>
+                         </ul>
+                        </div>
+                    </div>
+
+                    <div class="col bg-primary-subtle">
+                        <div class="wd-felx-grow-1">
+                            <button type="button" class="btn btn-light float-end btn-lg"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <button type="button" class="btn btn-danger float-end">+ Assignment</button>
+                            <button type="button" class="btn btn-light float-end">+ Group</button>
+                            <td valign="top">
+                              <input placeholder="Search for Assignments"/>
+                              <hr/>
+                              <!-- <table>
+                                  <tr>
+                                    <td valign="top"><h3>ASSIGNMENTS 40% of Total</h3></td>
+                                    <td valign="top">
+                                      <select>
+                                        <option>Edit</option>
+                                        <option>Speed Grader</option>
+                                        <option>Duplicate</option>
+                                        <option>Delete</option>
+                                        <option>Move To...</option>
+                                        <option>Send To...</option>
+                                        <option>Copy To...</option>
+                                        <option>Share to Commons</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                </table> -->
+
+                     <ul class="list-group mt-5">
+                        <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+                            Assignments
+                            <div class="d-flex">
+                              <button class="oval-button">40% of Total</button>
+                                <i class="fa-solid fa-plus ms-2 me-2"></i>
+                                <i class="fa-solid fa-ellipsis-vertical ms-2"></i>
+                            </div>
+                        </li>
+                    </ul>
+
+                            <ul class="list-group green-left-border "> 
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="vertical-divs">
+                                <div class="bold"><i class="fa-solid fa-book"></i>A1 SETUP</div>
+                                <div>Week 0 - Setup</div>
+                              </div>
+                                <div>
+                                    <i class="fa-solid fa-square-check" style="color: green;"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <div class="vertical-divs">
+                                <div class="bold"><i class="fa-solid fa-book"></i>A2 HTMl　</div>
+                                <div>Week 1 - HTML</div>
+                              </div>
+                              <div>
+                                  <i class="fa-solid fa-square-check" style="color: green;"></i>
+                                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                              </div>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="vertical-divs">
+                              <div class="bold"><i class="fa-solid fa-book"></i>A3 CSS</div>
+                              <div>Week 2 - Setup</div>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-square-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="vertical-divs">
+                            <div class="bold"><i class="fa-solid fa-book"></i>A4 BOOTSTRAP</div>
+                            <div>Week 3 - Setup</div>
+                          </div>
+                          <div>
+                              <i class="fa-solid fa-square-check" style="color: green;"></i>
+                              <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </div>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="vertical-divs">
+                          <div class="bold"><i class="fa-solid fa-book"></i>A5 JAVASCRIPT</div>
+                          <div>Week 4 - Setup</div>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-square-check" style="color: green;"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div class="vertical-divs">
+                        <div class="bold"><i class="fa-solid fa-book"></i>A6 REACT</div>
+                        <div>Week 5 - Setup</div>
+                      </div>
+                      <div>
+                          <i class="fa-solid fa-square-check" style="color: green;"></i>
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                      </div>
+                  </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+    </body>
+</html>
+
+
+
+
+<!-- <table>
     <tr>
-        <td valign="top"><ul>
-            <li><a href="/Kanbas/Account/Profile/index.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/home.html">Courses</a></li>
-            <li><a href="#">Calender</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul></td>
-        <td valign="top"><ul>
-            <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="/Kanbas/Courses/Assignments/assignments.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="/Kanbas/Courses/Grades/grades.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul></td>
+
         <td valign="top">
             <input placeholder="Search for Assignments"/>
             <button>Group</button>
@@ -147,4 +317,4 @@
             </li>
             </ul></td>
     </tr>
-</table>
+</table> -->

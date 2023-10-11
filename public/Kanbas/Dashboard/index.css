@@ -1,0 +1,41 @@
+.card {
+    min-width: 250px;
+    max-width: 270px;
+  }
+
+  /* 添加上下间距 */
+  .wd-dashboard-grid {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  /* 添加左边和右边间距 */
+  .wd-dashboard-grid {
+    margin-left: 30px; /* 调整间距以满足您的需求 */
+    margin-right: 30px; /* 调整间距以满足您的需求 */
+  }
+
+  /* 设置最大列数 */
+  @media (min-width: 992px) {
+    .row-cols-md-3 {
+      column-count: 4;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .row-cols-md-3 {
+      column-count: 3;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row-cols-md-3 {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .row-cols-md-3 {
+      column-count: 1; /* 一列只显示一个课程 */
+    }
+  }

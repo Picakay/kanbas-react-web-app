@@ -1,0 +1,11 @@
+p#lorem1 {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* 除了标id的段落之外所有段落都是下面这个蓝色的style */
+p {
+    background-color: blue;
+}

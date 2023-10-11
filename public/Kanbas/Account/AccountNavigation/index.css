@@ -1,0 +1,39 @@
+.wd-account-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 190px;
+    margin: 0px;
+    margin-left: 25px;
+    font-size: 20px;
+  }
+
+.wd-account-navigation li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+.wd-account-navigation li.wd-active {
+    border-left: 2px solid black;
+    padding-left: 10px;
+  }
+
+.wd-account-navigation li.wd-active a {
+    color: black;
+
+}
+
+.wd-account-navigation a {
+    color:red;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: red;
+  }
+  
+  .wd-fixed-top-margin {
+    margin-top: 70px;
+  }

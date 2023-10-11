@@ -1,125 +1,273 @@
-<table width="100%" border="1">
-    <tr>
-        <td valign="top"><ul>
-            <li><a href="/Kanbas/Account/Profile/index.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/home.html">Courses</a></li>
-            <li><a href="#">Calender</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul></td>
-        <td valign="top"><ul>
-            <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="/Kanbas/Courses/Assignments/Assignments.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="/Kanbas/Courses/Grades/Grades.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul></td>
-        <td valign="top"><select>
-            <option>Gradebook</option>
-            <option>2</option>
-        </select>
-        <button>Import</button>
-        <select>
-            <option>Export</option>
-            <option>UnPublish</option>
-        </select>
-        <button>Configure</button>
-        
-        <table width="100%">
-            <tbody>
-            <tr>
-                <td>Student Names<br/>
-                    <input title="Type the name of the student to search for" 
-                    placeholder="Search Students" />
-                </td>
-                <td>Assignment Names<br/>
-                    <input title="Type the assignment to search for"
-                    placeholder="Search Assignments"/>
-                </td>
-            </tr>
-        </tbody>
-        </table>
-        <button>Apply Filters</button>
-        
-        
-        <table width="100%">
-            <thead>
-                <tr>
-                    <th>Student name</th>
-                    <th>A1 - HTML</th>
-                    <th>A2 - CSS</th>
-                    <th>A3 - JS</th>
-                    <th>A4 - PHP</th>
-                    <th>Q1</th>
-                    <th>Q2</th>
-                    <th>Q3</th>
-                    <th>Q4</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Alice Wonderland</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                </tr>
-                <tr>
-                    <td>Bob Builder</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                </tr>
-                <tr>
-                    <td>Lily Huang</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                </tr>
-                <tr>
-                    <td>Jack Wilson</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                    <td>100%</td>
-                </tr>
-            </tbody>
-            <tfoot></tfoot>
-        </table></td>
-    </tr>
-</table>
+<html>
+    <head>
+        <link rel="stylesheet" href="kanbas/courses/home/styles.css">
+        <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+        <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+        <link href="/vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-1 bg-color-black">
+                <div class="wd-felx-row-container">
+                    <div class="bg-color-black d-none d-lg-block">
+                        <ul class="wd-kanbas-navigation">
+                            <li>
+                                <a href="/Kanbas/Account/Profile/index.html"><i class="fa fa-user" style="color:white"></i></br>Account</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kanbas/Dashboard/index.html"><i class="fa fa-keyboard"></i></br>
+                                  Dashboard</a>
+                            </li>
+                            <li class="wd-active">
+                                <a href="/Kanbas/Courses/Home/home.html"><i class="fa fa-book"></i></br>Courses</a</li>
+                            <li>
+                                <a href="#">
+                                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                                  Calendar
+                                </a>
+                            </li>
+                              <li><a href="#"><i class="fa fa-envelope"></i></br>Inbox</a></li>
+                              <li><a href="#"><i class="fa fa-clock"></i></br>History</a></li>
+                              <li><a href="#"><i class="fa fa-print"></i></br>Studio</a></li>
+                              <li><a href="#"><i class="fa fa-comment"></i><br/>Commons</a></li>
+                              <li><a href="#">
+                                <i class="fa fa-question"></i></br>
+                                Help</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+    
+            
+            <div class="col-11 bg-primary-subtle">
+                <div class="position-absolute top-0 end-0">
+                </div>
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" style="color: red; text-decoration: none;">
+                                <i class="fa fa-list" style="color: red;"></i>CS5200.12345.202410
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Grades
+                        </li>
+                    </ol>
+                  </nav>
+                  <hr/>
+                  <div class="row">
+                    <div class="col-2 bg-danger-subtle">
+                        <div class="d-none d-md-block">
+                            <ul class="wd-course-navigation">
+                            <li ><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li><a href="/Kanbas/Courses/Assignments/Assignments.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li class="wd-active"><a href="/Kanbas/Courses/Grades/Grades.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Settings</a></li>
+                         </ul>
+                        </div>
+                    </div>
+
+                    <div class="col bg-primary-subtle">
+                        <div class="wd-felx-grow-1 d-flex justify-content-end">
+                            <div class="btn-group">
+                                <button class="btn btn-light mx-2">
+                                    <i class="fa-solid fa-file-import"></i> Import
+                                </button>
+                                <div class="btn-group">
+                                    <button class="btn btn-light dropdown-toggle mx-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-file-export"></i> Export
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Export</a></li>
+                                        <li><a class="dropdown-item" href="#">UnPublish</a></li>
+                                    </ul>
+                                    <button class="btn btn-light mx-2">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                           
+                            
+
+                            
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>Student Names<br/>
+                                        <input title="Type the name of the student to search for" 
+                                        placeholder="Search Students" />
+                                    </td>
+                                    <td>Assignment Names<br/>
+                                        <input title="Type the assignment to search for"
+                                        placeholder="Search Assignments"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            
+                            <button>Apply Filters</button>
+                            
+                            <!-- <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Student name</th>
+                                        <th>A1 - HTML</th>
+                                        <th>A2 - CSS</th>
+                                        <th>A3 - JS</th>
+                                        <th>A4 - PHP</th>
+                                        <th>Q1</th>
+                                        <th>Q2</th>
+                                        <th>Q3</th>
+                                        <th>Q4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Alice Wonderland</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bob Builder</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lily Huang</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jack Wilson</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+
+
+                            <div class="table-responsive">
+                                <table class="table bordered-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Student name</th>
+                                            <th>A1 - HTML</th>
+                                            <th>A2 - CSS</th>
+                                            <th>A3 - JS</th>
+                                            <th>A4 - PHP</th>
+                                            <th>Q1</th>
+                                            <th>Q2</th>
+                                            <th>Q3</th>
+                                            <th>Q4</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="gray-background">
+                                            <td>Alice Wonderland</td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                        </tr>
+                                        <tr class="row2">
+                                            <td>Bob Builder</td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                        </tr>
+                                        <tr class="gray-background">
+                                            <td>Lily Huang</td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                        </tr>
+                                        <tr class="row2">
+                                            <td>Jack Wilson</td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                            <td><input type="text" class="form-control" value="100%"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+          </ul>
+
+                        </div>
+                    </div>
+                  
+                </div>
+
+
+    </body>
+</html>
+
+

@@ -1,61 +1,133 @@
-<table>
-    <tr>
-        <td valign="top"><ul>
-            <li><a href="/Kanbas/Account/Profile/index.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/home.html">Courses</a></li>
-            <li><a href="#">Calender</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul></td>
-        <td valign="top"><ul>
-
-            <li><a href="#">Notification</a></li>
-            <li><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">ePortfolios</a></li>
-            <li><a href="#">Shared Content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Quickly Course Tools</a></li>
-            <li><a href="#">Global Announcement</a></li>
+<html>
+    <head>
         
-        </ul></td>
-        <td valign="top"><h1>Kay L</h1>
-            Name:* <input value="Kay L"/>
-            Pronouns: <select><option>None</option></select>
-            <br />
-            Title: <input/>
-            
-            <h2>Contact</h2>
-            No registered services, you can add some on the <a href="#">settings</a> page.
-            
-            <h2>Biography</h2>
-            Faculty, Software Engineer, AI, Space, and renewable enthusiast.<br />
-            <textarea cols="60" rows="5">Faculty, Software Engineer, AI, Space, and renewable enthusiast.
-            </textarea>
-            
-            <body>
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="#">Youtube Links to an external site.</a></li>
-                </ul>
-                <table width="100%">
-                    <tr>
-                        <td>Title</td>
-                        <td>URL</td>
-                    </tr>
-                    <tr>
-                        <td><input value="YouTube"/></td>
-                        <td><input value="http://www.youtube.com"/><a href="#">Remove</a></td>
-                    </tr>
-                </table>
-                <button>Add another link</button><br />
-                <button>Cancel</button><button><a href="/Kanbas/Account/Profile/index.html">Save Profiles</a></button><br />
-                <button>Edit Profile</button><button><a href="/Kanbas/Account/Profile/index.html">Cancel Editing</a></button>
-            </body></td>
-    </tr>
-</table>
+            <link rel="stylesheet" href="/styles.css">
+            <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+            <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+            <link rel="stylesheet" href="/Kanbas/Account/AccountNavigation/index.css">
+            <link href="/vendors/fontawesome/css/all.css" rel="stylesheet"/>
+            <link href="/vendors/Bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        
+    </head>
+    <body>
+        <div class="wd-felx-row-container">
+            <div class="bg-color-black">
+                <ul class="wd-kanbas-navigation">
+                    <li class="wd-active">
+                        <a href="/Kanbas/Account/Profile/index.html"><i class="fa fa-user" style="color:grey"></i></br>Account</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-keyboard"></i></br>
+                          Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/Kanbas/Courses/Home/home.html"><i class="fa fa-book"></i></br>Courses</a</li>
+                    <li>
+                        <a href="#">
+                          <i class="fa fa-calendar" aria-hidden="true"></i>
+                          Calendar
+                        </a>
+                    </li>
+                      <li><a href="#"><i class="fa fa-envelope"></i></br>Inbox</a></li>
+                      <li><a href="#"><i class="fa fa-clock"></i></br>History</a></li>
+                      <li><a href="#"><i class="fa fa-print"></i></br>Studio</a></li>
+                      <li><a href="#"><i class="fa fa-comment"></i><br/>Commons</a></li>
+                      <li><a href="#">
+                        <i class="fa fa-question"></i></br>
+                        Help</a>
+                    </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="wd-account-navigation">
+                        <li ><a href="#">Notification</a></li>
+                        <li class="wd-active"><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">ePortfolios</a></li>
+                        <li><a href="#">Shared Content</a></li>
+                        <li><a href="#">The Hub</a></li>
+                        <li><a href="#">Quickly Course Tools</a></li>
+                        <li><a href="#">Global Announcement</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <h3>Kay L's Profile</h3>
+                        <hr/>
+                        <table width="100%">
+                            <tr>
+                                <span><i class="fa fa-user" style="font-size: 70px;"></i></span>
+                                <td style="text-align: right;">
+                                    <a href="/Kanbas/Account/Profile/index.html">
+                                        <button type="button" class="btn btn-light">
+                                            <i class="fa fa-paw" aria-hidden="true"></i>Cancel Editing
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name:*</label><br />
+                            <input type="text" value="Kay L" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Pronouns:</label><br />
+                            <select><option>None</option></select>
+                        </div>
+                    
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Title:</label><br />
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                     
+
+                    
+                        <div class="mb-3">
+                            <h2 style="text-transform: uppercase; font-size: 20px;">Contact</h2>
+                            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+                        </div>
+                        <div class="mb-3">
+                            <h2 style="text-transform: uppercase; font-size: 20px;">Biography</h2>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Current student at SV campus.</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <h2 style="text-transform: uppercase; font-size: 20px;">Links</h2>
+     
+                        </div>
+                        <table width="100%">
+                            <tr>
+                                <td>Title</td>
+                                <td>URL</td>
+                            </tr>
+                            <tr>
+                                <td><input value="YouTube"/></td>
+                                <td><input value="http://www.youtube.com"/><a href="#">Remove</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button>Add another link</button>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                <div class="float-end">
+                    <a href="/Kanbas/Account/Profile/index.html">
+                        <button style="width: 150px; height: 40px;">Cancel</button>
+                    </a>
+                    <a href="/Kanbas/Account/Profile/index.html">
+                    <button type="button" class="btn btn-danger" style="width: 150px; height: 40px;">
+                        Save Profiles
+                    </button></a>
+                </div>
+                
+                
+                
+                </div>
+            </div> 
+                </div>
+    </body>
+</html>

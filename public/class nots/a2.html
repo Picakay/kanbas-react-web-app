@@ -1,0 +1,303 @@
+<!-- 1. Style Attributes from CSS -->
+<p style="background-color: blue; color: white">
+    Style attribute allows configuring look and feel right on the element. Although it's very convenient it is considered bad practice and you should avoid using the style attribute
+  </p>
+  <!-- Another way:declare CSS rules in the <style></style> -->
+  <head>
+  <style>
+    p {
+        background-color: blue;
+        color: white;
+    }
+</style>
+</head>
+<p>
+    A slightly better way to configure look and feel
+    is to declare CSS rules in the STYLE tag in the
+    header and then refer to the tag by their name, 
+    ID, or class This paragraph's style is set by a 
+    rule referring to the P tags
+</p>
+<!-- Another way:put CSS styles in index.css -->
+<!-- In index.css -->
+p {
+    background-color: blue;
+    color: white;
+ }
+<!-- In index.html  -->
+<head>
+    <link href="index.css"
+          rel="stylesheet"/>
+ </head>
+
+
+ <!-- 2. Selecting content to style with selector -->
+
+ <!-- (1)ID selectors -->
+ <!-- In index.css using id to match the contents-->
+ p#id-selector-1 {
+    background-color: red;
+    color: white;
+   }
+   p#id-selector-2 {
+    background-color: yellow;
+    color: black;
+   }
+<!-- In index.html -->
+   <p id="id-selector-1">
+    Instead of changing the look and
+    feel of all the elements of the 
+    same name, e.g., P, we can refer 
+    to a specific element by its ID
+   </p>
+   <p id="id-selector-2">
+    Here's another paragraph using a
+    different ID and a different look 
+    and feel
+   </p>
+
+<!-- (2)Class selectors -->
+<!-- In index.css -->
+.wd-class-selector {
+    background-color: yellow;
+    color: blue;
+   }
+<!-- In index.html，可以用在任意类型上，比如p和h都可以用，只要加上class  -->
+<p class="wd-class-selector">
+ Instead of using IDs to refer
+ to elements, you can use an
+ element's CLASS attribute</p>
+
+ <!-- (3)Document structure -->
+ <!-- 没看懂问一下chat老师 -->
+
+
+ <!-- 3. Styling Color -->
+<!-- Colors can be defined as follows
+As strings, e.g., white, red, blue, etc
+As hexadecimals, e.g., #ABCDEF
+As RGB, e.g., rgb(12, 34, 56) -->
+ .some-css-selector {
+    color: blue;
+ }
+<!-- Q：背景色和前景色必须用固定的词来写吗？ -->
+.wd-fg-color-black { color: black; }
+.wd-bg-color-yellow {background-color: #ffff07;}
+
+
+<!-- 4. Styling Box models -->
+<!-- (1)Borders -->
+.some-selector {
+    border-width: 10px;
+    border-style: solid|dotted|dashed|double;
+    border-color: red | blue ...;
+  }
+  .wd-border-fat {
+    border-width: 20px 30px 20px 30px; }
+ .wd-border-solid {
+    border-style: solid; }
+ .wd-border-red {
+    border-color: #ff7070; }
+<p class="wd-border-fat wd-border-red wd-border-solid">
+        Solid fat red border
+</p>
+
+<!-- (2)Margins and Paddings -->
+<!-- margin>border>padding -->
+<!-- Padding是字体距离字体框边缘的位置，也就是字体在字体框里的位置在哪
+Margin是border外距离浏览器边缘的距离 -->
+.wd-padded-top-left {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+.wd-padding-fat {
+    padding: 50px;
+  }
+.wd-margin-right-left {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+.wd-margin-all-around {
+    margin: 30px; 
+  }
+  
+<!-- (3) Corners -->
+.wd-rounded-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+   }
+.wd-rounded-corners-all-around {
+    border-radius: 50px;
+   }
+.wd-rounded-corners-inline {
+    border-radius: 30px 0px 20px 50px;
+   }
+
+
+<!-- 5.Styling Dimensions:height & width -->
+.wd-dimension-portrait {
+    width: 75px;
+    height: 100px;
+ }
+
+ <div class="wd-dimension-portrait wd-bg-color-yellow">
+    Portrait
+</div>
+
+<!-- 6. Styling Positions -->
+<!-- (1) relative position-relative to original position -->
+.wd-pos-relative-nudge-up-right {
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+ }
+ <div class="wd-bg-color-yellow 
+             wd-dimension-portrait">
+  <div class="wd-pos-relative-nudge-down-right">
+       Portrait</div>
+ </div>
+ 
+<!-- (2) absolute position-relative to its parent -->
+.wd-pos-absolute-10-10 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+ }
+ <!-- (3)fixed position -->
+ .wd-pos-fixed {
+    position: fixed;
+    right: 0px;
+    bottom: 50%;
+  }
+
+  <div class="wd-pos-fixed 
+  wd-dimension-square 
+  wd-bg-color-blue 
+  wd-fg-color-white">
+Fixed position
+</div>
+
+<!-- (4)Z-index-to determine which one is on the top -->
+.wd-zindex-bring-to-front {
+    z-index: 10;
+ }
+ <div class="wd-pos-absolute-10-10 
+        wd-bg-color-yellow 
+        wd-dimension-portrait">
+        Portrait</div>
+   <div class="wd-zindex-bring-to-front 
+        wd-pos-absolute-50-50 
+        wd-bg-color-blue wd-fg-color-white 
+        wd-dimension-landscape">
+        Landscape</div>
+
+<!-- (5)Floating Content-display horizontally -->
+.wd-float-left {
+    float: left;
+ }
+ 
+ .wd-float-right {
+    float: right;
+    height: 100px;
+ }
+ 
+ .wd-float-done {
+    clear: both;
+ }
+ <div class="wd-float-left wd-dimension-portrait wd-bg-color-yellow">
+    Yellow</div>
+<div class="wd-float-left wd-dimension-portrait wd-bg-color-blue wd-fg-color-white">
+    Blue</div>
+<div class="wd-float-left wd-dimension-portrait wd-bg-color-red">
+    Red</div>
+<img class="wd-float-right"      src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"/>
+<div class="wd-float-done"></div>
+
+<!-- (6)Grid layout -->
+.wd-grid-row {
+    clear: both;
+ }
+ 
+ .wd-grid-col-half-page {
+    width: 50%;
+    float: left;
+ }
+ .wd-grid-col-third-page {
+    width: 33%;
+    float: left;
+ }
+ 
+ .wd-grid-col-two-thirds-page {
+    width: 67%;
+    float: left;
+ }
+ 
+ .wd-grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+ }
+ 
+ .wd-grid-col-main-content {
+    width: 60%;
+    float: left;
+ }
+ 
+ .wd-grid-col-right-sidebar {
+    width: 20%;
+    float: left;
+ }
+ <div class="wd-grid-row">
+    <div class="wd-grid-col-half-page wd-bg-color-yellow">
+      <h3>Left half</h3>
+    </div>
+    <div class="wd-grid-col-half-page wd-bg-color-blue
+                wd-fg-color-white">
+      <h3>Right half</h3>
+    </div>
+  </div>
+  <div class="wd-grid-row">
+    <div class="wd-grid-col-third-page wd-bg-color-green
+                wd-fg-color-white">
+      <h3>Left third</h3>
+    </div>
+    <div class="wd-grid-col-two-thirds-page wd-bg-color-red
+                wd-fg-color-white">
+      <h3>Right two thirds</h3>
+    </div>
+  </div>
+  <div class="wd-grid-row">
+    <div class="wd-grid-col-left-sidebar wd-bg-color-yellow">
+      <h3>Side bar</h3>
+      <p>This is the left sidebar</p>
+    </div>
+    <div class="wd-grid-col-main-content wd-bg-color-blue
+                wd-fg-color-white">
+      <h3>Main content</h3>
+      <p>This is the main content. This is the main content.
+         This is the main content. </p>
+    </div>
+    <div class="wd-grid-col-right-sidebar wd-bg-color-green
+                wd-fg-color-white">
+      <h3>Side bar</h3>
+      <p>This is the right sidebar</p>
+    </div>
+  </div>
+
+  <!-- (7)Flex-container element-laying out content horizontally -->
+  <div class="wd-flex-row-container">
+    <div class="bg-color-yellow">Column 1</div>
+    <div class="bg-color-blue">Column 2</div>
+    <div class="bg-color-red wd-flex-grow-1">
+         Column 3
+    </div>
+  </div>
+  
+  .wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .wd-flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+  
