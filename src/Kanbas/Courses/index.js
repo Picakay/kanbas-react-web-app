@@ -13,9 +13,9 @@ import Grades from "./Grades";
 
 
 
-function Courses(){
+function Courses({ courses }){
     const {courseId} = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const location = useLocation();
     const currentPath = location.pathname.split("/").pop(); 
 

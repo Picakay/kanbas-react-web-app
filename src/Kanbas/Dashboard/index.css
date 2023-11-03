@@ -1,3 +1,28 @@
 .dashboard-container {
     margin-left: 20px; /* 调整你想要的左边距大小 */
   }
+
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 可以根据需要调整间距 */
+  }
+  .update-button {
+    color: black; /* 文字颜色为黑色 */
+    background-color: #ffb700; /* 背景颜色为黄色 */
+  }
+
+  .add-button {
+    color: white; /* 文字颜色为白色 */
+    background-color: green; /* 背景颜色为绿色 */
+  }
+
+  .edit-button {
+    color: white; /* 文字颜色为白色 */
+    background-color: blue; /* 背景颜色为绿色 */
+  }
+
+  .delete-button {
+    color: white; /* 文字颜色为白色 */
+    background-color: red; /* 背景颜色为绿色 */
+  }     

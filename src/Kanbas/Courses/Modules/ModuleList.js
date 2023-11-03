@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState }from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./ModuleList.css";
 import {FaEllipsisVertical} from "react-icons/fa6";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+
 
   return (
     <div className="module-list-container">
@@ -19,11 +29,25 @@ function ModuleList() {
           <i className="fa-regular fa-square-check" style={{ color: "green" }}></i>
           Publish All
         </button>
-        <button className="button btn btn-danger">+ Module</button>
         <button className="button btn btn-light">
         <FaEllipsisVertical />
         </button>
+        <button className="button btn btn-danger"
+          onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          + Module</button>
+        <button 
+          onClick={() => dispatch(updateModule(module))}>
+                Update
+        </button>
 
+        <input value={module.name}
+          onChange={(e) => 
+            dispatch(setModule({ ...module, name: e.target.value }))}
+        />
+        <textarea value={module.description}
+          onChange={(e) => 
+            dispatch(setModule({ ...module, description: e.target.value }))}
+        />
       </div>
 
       <div className="lists-container">
@@ -32,6 +56,16 @@ function ModuleList() {
             .filter((module) => module.course === courseId)
             .map((module, index) => (
               <li key={index} className="list-group-item">
+                <button
+              onClick={() => dispatch(setModule(module))}>
+              Edit
+                </button>
+
+                <button
+              onClick={() => dispatch(deleteModule(module._id))}>
+              Delete
+                </button>
+
                 <h3>{module.name}</h3>
                 <p>{module.description}</p>
                 {module.lessons && (
@@ -48,7 +82,7 @@ function ModuleList() {
             ))}
         </ul>
 
-        <ul className="list-group">
+      <ul className="list-group">
         <div className="row">
             
   <div className="col-2 bg-primary-subtle">

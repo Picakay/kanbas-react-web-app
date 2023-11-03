@@ -16,7 +16,11 @@ function Assignments() {
       </div>
       <div>
           <button className="button btn btn-light">+ Group</button>
-          <button className="button btn btn-danger">+ Assignment</button>
+          <Link to={`/AssignmentEditor`}
+            className="btn btn-light">
+        Cancel
+      </Link>
+<button className="button btn btn-danger">+ Assignment</button>
           <br />
         </div>
       
@@ -24,6 +28,7 @@ function Assignments() {
       
       <div className="list-group">
       <h2 style={{ backgroundColor: 'lightgray' }}>Assignments for course {courseId}</h2>
+      
         {courseAssignments.map((assignment) => (
           <Link
             key={assignment._id}
