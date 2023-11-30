@@ -16,17 +16,9 @@ import * as client from "./client";
 
 function ModuleList() {
 
-  // const handleUpdateModule = async () => {
-  //   const status = await client.updateModule(module);
-  //   dispatch(updateModule(module));
-  // };
   const handleUpdateModule = async () => {
-    try {
-      const updatedModule = await client.updateModule(module);
-      dispatch(updateModule(updatedModule));
-    } catch (error) {
-      console.error('Error updating module:', error);
-    }
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
   };
   
 
