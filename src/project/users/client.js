@@ -5,7 +5,7 @@ import axios from "axios";
 // });
 //
 
-const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:4000";
+const API_BASE = process.env.REACT_APP_BASE_API_URL || "http://localhost:4000";
 const USERS_API = `${API_BASE}/api/users`;
 const request = axios.create({
   withCredentials: true,
